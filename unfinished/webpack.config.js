@@ -26,7 +26,7 @@ var common = {
   },
   plugins: [
     new HtmlwebpackPlugin({
-      title: 'Playing With React and D3'
+      title: 'React Under the Hood'
     })
   ]
 };

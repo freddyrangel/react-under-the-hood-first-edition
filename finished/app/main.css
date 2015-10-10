@@ -1,0 +1,48 @@
+svg {
+  display: block;
+  margin: auto;
+  background-color: #010101;
+}
+
+.star-circle {
+  fill: #FDF128;
+}
+
+.star-name {
+  font-size: 10px;
+  display: block;
+  fill: grey;
+}
+
+.star-name.federation {
+  fill: aqua;
+}
+
+.star-name.romulan-empire {
+  fill: red;
+}
+
+.star-name.garidian-republic {
+  fill: pink;
+}
+
+.star-name.elorg-bloc {
+  fill: purple;
+}
+
+.star-name.cardassian-union {
+  fill: teal;
+}
+
+.star-name.tzenkethi-coalition{
+  fill: orange;
+}
+
+.star-name.klingon-empire{
+  fill: mediumvioletred;
+}
+
+.star-name:hover {
+  fill: blue;
+}
+
