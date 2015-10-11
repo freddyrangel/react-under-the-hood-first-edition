@@ -342,7 +342,7 @@ var Stars = {
       },
       {
         name: 'Sol',
-        coordinates: [499, 299],
+        coordinates: [500, 300],
         jurisdiction: 'Federation'
       },
       {

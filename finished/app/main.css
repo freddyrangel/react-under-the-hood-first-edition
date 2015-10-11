@@ -58,3 +58,7 @@ svg {
   fill: blue;
 }
 
+.ship-info ul {
+  color: #62F1D3;
+  list-style: none;
+}

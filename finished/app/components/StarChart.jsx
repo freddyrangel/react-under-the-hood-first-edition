@@ -1,11 +1,15 @@
-var React = require('react');
+var React    = require('react');
+var Starship = require('./Starship.jsx');
 
 var StarChart = React.createClass({
   render: function() {
     var props = this.props;
     return (
       <div className="star-chart">
-        <svg width="1000" height="600">{props.starData.map(this.renderStars)}</svg>
+        <svg width="1000" height="600">
+          {props.starData.map(this.renderStars)}
+          <Starship ship={props.ship} />
+        </svg>
       </div>
     );
   },
