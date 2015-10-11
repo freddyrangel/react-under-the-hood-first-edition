@@ -16,19 +16,21 @@ var StarChart = React.createClass({
 
   renderStars: function(star) {
     var circleAttr = {
-      cx: star.coordinates[0],
-      cy: star.coordinates[1],
+      cx: star.position[0],
+      cy: star.position[1],
       r: 2,
       className: 'star-circle'
     };
     var textAttr = {
-      x: star.coordinates[0] + 5,
-      y: star.coordinates[1] + 5,
+      x: star.position[0] + 5,
+      y: star.position[1] + 5,
       className: 'star-name' + ' ' + this.jurisdictionToClassName(star)
     };
     return (
       <g key={star.id}>
-        <text {...textAttr}>{star.name}</text>
+        <text {...textAttr} onClick={this.props.updateDestination.bind(null, star.position)}>
+          {star.name}
+        </text>
         <circle {...circleAttr}></circle>
       </g>
     );

@@ -15,7 +15,8 @@ var App = React.createClass({
           tacticalOfficer: null,
           helmsman: null
         },
-        position: [500, 300]
+        position: [500, 300],
+        destination: [500, 300]
       }
     };
   },
@@ -24,7 +25,10 @@ var App = React.createClass({
     var ship = this.state.ship;
     return (
       <div>
-        <StarChart starData={Stars.getStarData()} ship={ship} />
+        <StarChart
+          starData={Stars.getStarData()}
+          ship={ship}
+          updateDestination={this.updateDestination}/>
         <ShipInfo
           ship={ship}
           updateShip={this.updateShip} />
@@ -33,6 +37,12 @@ var App = React.createClass({
   },
 
   updateShip: function(ship) {
+    this.setState({ship: ship});
+  },
+
+  updateDestination: function(destination) {
+    var ship = this.state.ship;
+    ship.destination = destination;
     this.setState({ship: ship});
   }
 });
