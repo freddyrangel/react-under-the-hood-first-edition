@@ -1,6 +1,18 @@
-svg {
+body {
+  background-color: #182C5C;
+}
+
+.star-chart {
+  border: 5px solid #3879A1;
   display: block;
   margin: auto;
+  width: 1010px;
+  height: 610px;
+}
+
+svg {
+  display: block;
+  margin: 5px auto;
   background-color: #010101;
 }
 

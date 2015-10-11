@@ -3,7 +3,11 @@ var React = require('react');
 var StarChart = React.createClass({
   render: function() {
     var props = this.props;
-    return <svg width="1000" height="600">{props.starData.map(this.renderStars)}</svg>
+    return (
+      <div className="star-chart">
+        <svg width="1000" height="600">{props.starData.map(this.renderStars)}</svg>
+      </div>
+    );
   },
 
   renderStars: function(star) {
