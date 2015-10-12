@@ -1,6 +1,14 @@
 body {
   background-color: #182C5C;
 }
+ul {
+  list-style: none;
+}
+
+.dashboard > div {
+  color: #62F1D3;
+  display: inline-block;
+}
 
 .star-chart {
   border: 5px solid #3879A1;
@@ -56,9 +64,4 @@ svg {
 
 .star-name:hover {
   fill: blue;
-}
-
-.ship-info ul {
-  color: #62F1D3;
-  list-style: none;
 }

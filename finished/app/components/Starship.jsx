@@ -2,6 +2,7 @@ var React = require('react');
 var nav   = require('../utilities/starshipNavigation.js');
 
 var Starship = React.createClass({
+
   render: function() {
     return (
       // React does not support SVG Image elements. We need to do this ourselves
@@ -13,12 +14,12 @@ var Starship = React.createClass({
     var navData       = nav.data(this.props.ship);
     var shipPosition  = this.props.ship.position
     var imagePosition = navData.imagePosition;
-    var rotationAngle = navData.rotationAngle;
-    var imageInText = '<image xlink:href="app/images/starship.png"' +
+    var heading       = navData.heading;
+    var imageInText   = '<image xlink:href="app/images/starship.png"' +
       // Image Position
       'x="' + imagePosition[0] + '" y="' + imagePosition[1] +
       // Rotation Angle
-      '" transform="rotate(' + rotationAngle + ' ' +
+      '" transform="rotate(' + heading + ' ' +
       // Rotation Center
       imagePosition[0]+ ' ' + imagePosition[1] + ')"' +
       // Size of Image

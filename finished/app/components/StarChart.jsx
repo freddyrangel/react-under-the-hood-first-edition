@@ -8,7 +8,9 @@ var StarChart = React.createClass({
       <div className="star-chart">
         <svg width="1000" height="600">
           {props.starData.map(this.renderStars)}
-          <Starship ship={props.ship} />
+          <Starship
+            ship={props.ship}
+            updateShipPosition={this.props.updateShipPosition}/>
         </svg>
       </div>
     );
@@ -28,7 +30,7 @@ var StarChart = React.createClass({
     };
     return (
       <g key={star.id}>
-        <text {...textAttr} onClick={this.props.updateDestination.bind(null, star.position)}>
+        <text {...textAttr} onClick={this.props.updateDestination.bind(null, star)}>
           {star.name}
         </text>
         <circle {...circleAttr}></circle>
