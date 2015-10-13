@@ -33,21 +33,27 @@ var App = React.createClass({
 
   render: function() {
     var ship = this.state.ship;
+    var stars = Stars.getStarData();
     return (
       <div>
         <StarChart
-          starData={Stars.getStarData()}
+          starData={stars}
           ship={ship}
           updateDestination={this.updateDestination}
           updateShipPosition={this.updateShipPosition}/>
-        <div className="dashboard">
+        <div className="helm">
+          <div id="helm-header">
+            <h1>Helm Control</h1>
+          </div>
           <ShipInfo
             ship={ship}
             updateShip={this.updateShip} />
           <Navigation
             ship={ship}
+            stars={stars}
             updateSpeed={this.updateSpeed}
-            engageWarpDrive={this.engageWarpDrive}/>
+            engageWarpDrive={this.engageWarpDrive}
+            updateDestination={this.updateDestination}/>
         </div>
       </div>
     );

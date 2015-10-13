@@ -1,6 +1,6 @@
 var React = require('react');
 
-var EditableLineItem = React.createClass({
+var EditableElement = React.createClass({
   getInitialState: function() {
     return { editing: false };
   },
@@ -11,7 +11,7 @@ var EditableLineItem = React.createClass({
 
   renderValue: function() {
     var props = this.props;
-    return <li onClick={this.enterEditState}>{props.item || props.defaultValue}</li>
+    return <p onClick={this.enterEditState}>{props.item || props.defaultValue}</p>
   },
 
   enterEditState: function() {
@@ -42,4 +42,4 @@ var EditableLineItem = React.createClass({
   }
 });
 
-module.exports = EditableLineItem;
+module.exports = EditableElement;

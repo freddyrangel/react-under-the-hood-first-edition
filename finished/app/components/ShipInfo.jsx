@@ -1,6 +1,6 @@
 var React            = require('react');
 var CrewInfo         = require('./CrewInfo.jsx');
-var EditableLineItem = require('./EditableLineItem.jsx');
+var EditableElement  = require('./EditableElement.jsx');
 
 var ShipInfo = React.createClass({
   render: function() {
@@ -8,13 +8,12 @@ var ShipInfo = React.createClass({
     var crew = ship.crew;
     return (
       <div className="ship-info">
-        <ul>
-          <EditableLineItem
-            keyName="name"
-            item={ship.name}
-            defaultValue="Enter Ship Name"
-            onEdit={this.updateShipName}/>
-        </ul>
+        <h2>Ship Info</h2>
+        <EditableElement
+          keyName="name"
+          item={ship.name}
+          defaultValue="Ship Name"
+          onEdit={this.updateShipName}/>
         <CrewInfo crew={crew} updateCrew={this.updateCrew}/>
       </div>
     );

@@ -1,6 +1,6 @@
 var uuid = require('node-uuid');
 
-var Stars = {
+var stars = {
   getStarData: function() {
     var rawData = this.rawData();
     var dataWithUUIDs = rawData.map(this.addUUID);
@@ -1033,9 +1033,9 @@ var Stars = {
         name: 'Qo\' Nos',
         position: [960, 580],
         jurisdiction: 'Klingon Empire'
-      },
+      }
     ];
   }
-}
+};
 
-module.exports = Stars;
+module.exports = stars;

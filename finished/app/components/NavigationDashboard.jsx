@@ -9,10 +9,13 @@ var NavigationDashboard = React.createClass({
     var posY = Math.round(ship.position[0]);
     return (
       <div className="navigation-dashboard">
-        <p>On Course to: {destination.name}</p>
-        <p>
-          Current Position: {posX}-mark-{posY}</p>
-        <p>Heading: {nav.heading(ship)}-mark-0</p>
+        <h2>Navigation</h2>
+        <p>Destination:</p>
+        <p>{destination.name.toUpperCase()}</p>
+        <p>Current Position:</p>
+        <p>{posX}-MARK-{posY}</p>
+        <p>Heading:</p>
+        <p>{nav.heading(ship)}-MARK-0</p>
       </div>
     );
   }

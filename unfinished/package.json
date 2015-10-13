@@ -42,6 +42,8 @@
     "webpack-merge": "^0.2.0"
   },
   "dependencies": {
+    "jquery": "^2.1.4",
+    "jquery-ui": "^1.10.5",
     "react": "^0.13.3"
   }
 }

@@ -27,6 +27,10 @@ var common = {
   plugins: [
     new HtmlwebpackPlugin({
       title: 'React Under the Hood'
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
     })
   ]
 };

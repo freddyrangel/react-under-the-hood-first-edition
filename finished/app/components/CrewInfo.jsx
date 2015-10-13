@@ -1,23 +1,23 @@
 var React            = require('react');
-var EditableLineItem = require('./EditableLineItem.jsx');
+var EditableElement  = require('./EditableElement.jsx');
 
 var CrewInfo = React.createClass({
   render: function() {
     var crew = this.props.crew;
     return (
-      <ul className="crew-info">
-        {this.renderLineItem('captain', crew.captain, 'Set Captain Name')}
-        {this.renderLineItem('firstOfficer', crew.firstOfficer, 'Set First Officer')}
-        {this.renderLineItem('chiefEngineer', crew.chiefEngineer, 'Set Chief Engineer')}
-        {this.renderLineItem('tacticalOfficer', crew.tacticalOfficer, 'Set Tactical Officer')}
-        {this.renderLineItem('helmsman', crew.helmsman, 'Set Helmsman')}
-      </ul>
+      <div className="crew-info">
+        {this.renderElement('captain', crew.captain, 'Captain Name')}
+        {this.renderElement('firstOfficer', crew.firstOfficer, 'First Officer')}
+        {this.renderElement('chiefEngineer', crew.chiefEngineer, 'Chief Engineer')}
+        {this.renderElement('tacticalOfficer', crew.tacticalOfficer, 'Tactical Officer')}
+        {this.renderElement('helmsman', crew.helmsman, 'Helmsman')}
+      </div>
     );
   },
 
-  renderLineItem: function(keyName, item, defaultValue) {
+  renderElement: function(keyName, item, defaultValue) {
     return (
-      <EditableLineItem
+      <EditableElement
           keyName={keyName}
           item={item}
           defaultValue={defaultValue}

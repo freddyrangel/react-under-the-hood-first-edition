@@ -21,12 +21,17 @@ var common = {
         test: /\.css$/,
         loaders: ['style', 'css'],
         include: path.resolve(ROOT_PATH, 'app')
-      }
+      },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
     ]
   },
   plugins: [
     new HtmlwebpackPlugin({
       title: 'React Under the Hood'
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
     })
   ]
 };

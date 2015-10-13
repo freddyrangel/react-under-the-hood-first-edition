@@ -1,21 +1,19 @@
+@font-face {
+  font-family: Roddenberry;
+  src: url('fonts/roddenberry/Roddenberry.ttf');
+}
+
 body {
   background-color: #182C5C;
 }
-ul {
-  list-style: none;
-}
-
-.dashboard > div {
-  color: #62F1D3;
-  display: inline-block;
-}
 
 .star-chart {
-  border: 5px solid #3879A1;
+  border: 2px solid #62F1D3;
   display: block;
   margin: auto;
   width: 1010px;
   height: 610px;
+  border-radius: 10px;
 }
 
 svg {
@@ -30,7 +28,6 @@ svg {
 
 .star-name {
   font-size: 10px;
-  display: block;
   fill: grey;
 }
 
@@ -64,4 +61,138 @@ svg {
 
 .star-name:hover {
   fill: blue;
+}
+
+.helm {
+  width: 1010px;
+  margin: 10px auto;
+  text-align: center;
+  border: 2px solid #62F1D3;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.helm h2 {
+  font: 28px Roddenberry;
+}
+
+#helm-header {
+  font: 1.1em Roddenberry;
+  background-color: #FFAD01;
+  text-align: right;
+  color: #182C5C;
+  padding-right: 25px;
+  text-shadow: none;
+}
+
+.ship-info {
+  display: inline-block;
+  width: 200px;
+  border: 2px solid #B3C8FD;
+  border-radius: 10px;
+  vertical-align: top;
+  margin: 0 10px 20px 10px;
+  background-color: #2D4E94;
+  color: #ECE660;
+  height: 315px;
+}
+
+.navigation {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.navigation > div {
+  display: inline-block;
+  width: 200px;
+  border: 2px solid #B3C8FD;
+  margin-top: 0;
+  padding-top: 0;
+  border-radius: 10px;
+  vertical-align: top;
+  margin: 0 10px;
+  background-color: #2D4E94;
+  color: #ECE660;
+  height: 315px;
+}
+
+.arrow-controls {
+  margin-top: 35px;
+}
+
+.arrow-controls button {
+  border: 5px solid #69F0D2;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px 1px #69F0D2, inset 0px 0px 10px 1px #69F0D2;
+  background: #39697A;
+  width: 75px;
+  font-size: 30px;
+  color: #ECE660;
+  margin: 0 5px 0 5px;
+}
+
+.engage button {
+  border: 5px solid #69F0D2;
+  border-radius: 1px;
+  box-shadow: 0px 0px 10px 1px #69F0D2, inset 0px 0px 10px 1px #69F0D2;
+  background: #39697A;
+  width: 160px;
+  margin: 10px auto 10px auto;
+  font-family: monospace;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #ECE660;
+  height: 50px;
+}
+
+.ui-menu .ui-menu-item {
+  font-family: monospace;
+  font-size: 16px;
+  color: #ECE660;
+  list-style-type: none;
+  height: 30px;
+  padding-left: 0;
+  margin-left: 0;
+  position: static;
+  top: 300px;
+  left: 200px;
+}
+
+.course-control input {
+  font-family: monospace;
+  font-size: 16px;
+  height: 30px;
+  background-color: #010101;
+  color: #ECE660;
+  width: 135px;
+  letter-spacing: 0.1em;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active, 
+.ui-autocomplete, .ui-autocomplete:hover, 
+.ui-menu-item, .ui-menu-item:hover,
+.ui-menu-item a, .ui-menu-item a:hover,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active,
+.ui-menu .ui-menu-item a {
+  padding: 5px;
+  margin: 10px auto;
+  display: block;
+  border:0;
+  border-collapse:collapse;
+}
+
+.ui-state-focus {
+  color: White;
+  background: #96B202;
+  outline: none;
+  width: 135px;
+  float: left;
 }
