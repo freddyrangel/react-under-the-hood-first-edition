@@ -12,8 +12,8 @@ var App = React.createClass({
   getInitialState: function() {
     return {
       ship: {
-        name: null,
-        crew: {
+        info: {
+          shipName: null,
           captain: null,
           firstOfficer: null,
           chiefEngineer: null,
@@ -39,15 +39,12 @@ var App = React.createClass({
         <StarChart
           starData={stars}
           ship={ship}
-          updateDestination={this.updateDestination}
-          updateShipPosition={this.updateShipPosition}/>
+          updateDestination={this.updateDestination}/>
         <div className="helm">
           <div id="helm-header">
             <h1>Helm Control</h1>
           </div>
-          <ShipInfo
-            ship={ship}
-            updateShip={this.updateShip} />
+          <ShipInfo ship={ship} updateShip={this.updateShip} />
           <Navigation
             ship={ship}
             stars={stars}

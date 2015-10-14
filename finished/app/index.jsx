@@ -1,8 +1,9 @@
-var React = require('react');
-var css   = require('./main.css');
-var App   = require('./components/App.jsx');
+require('./main.css');
+var React    = require('react');
+var ReactDOM = require('react-dom');
+var App      = require('./components/App.jsx');
 
 var appNode = document.createElement('div');
-appNode.className = 'react-app';
+appNode.className = 'star-trek-app';
 document.body.appendChild(appNode);
-React.render(<App />, appNode);
+ReactDOM.render(<App />, appNode);

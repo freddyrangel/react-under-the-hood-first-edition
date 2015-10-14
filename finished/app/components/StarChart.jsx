@@ -8,9 +8,7 @@ var StarChart = React.createClass({
       <div className="star-chart">
         <svg width="1000" height="600">
           {props.starData.map(this.renderStars)}
-          <Starship
-            ship={props.ship}
-            updateShipPosition={this.props.updateShipPosition}/>
+          <Starship ship={props.ship}/>
         </svg>
       </div>
     );

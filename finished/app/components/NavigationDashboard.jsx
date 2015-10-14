@@ -6,7 +6,7 @@ var NavigationDashboard = React.createClass({
     var ship = this.props.ship
     var destination = ship.destination;
     var posX = Math.round(ship.position[0]);
-    var posY = Math.round(ship.position[0]);
+    var posY = Math.round(ship.position[1]);
     return (
       <div className="navigation-dashboard">
         <h2>Navigation</h2>

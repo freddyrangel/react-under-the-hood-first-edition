@@ -1,6 +1,7 @@
 require('jquery-ui/autocomplete');
-var React = require('react');
-var utils = require('../utilities/starUtilities.js');
+var React    = require('react');
+var ReactDOM = require('react-dom');
+var utils    = require('../utilities/starUtilities.js');
 
 var CourseControl = React.createClass({
   render: function() {
@@ -26,7 +27,7 @@ var CourseControl = React.createClass({
   autocomplete: function() {
     var stars = this.props.stars
     var starNames = utils.getStarNames(stars);
-    $(React.findDOMNode(this.refs.search)).autocomplete({
+    $(ReactDOM.findDOMNode(this.refs.search)).autocomplete({
       source: starNames,
       minLength: 3,
       select: function(event, ui) {

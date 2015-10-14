@@ -1,5 +1,5 @@
-var React = require('react');
-var nav   = require('../utilities/starshipNavigation.js');
+var React         = require('react');
+var starshipImage = require('../utilities/starshipImage.js');
 
 var Starship = React.createClass({
 
@@ -11,19 +11,7 @@ var Starship = React.createClass({
   },
 
   renderImage: function() {
-    var navData       = nav.data(this.props.ship);
-    var shipPosition  = this.props.ship.position
-    var imagePosition = navData.imagePosition;
-    var heading       = navData.heading;
-    var imageInText   = '<image xlink:href="app/images/starship.png"' +
-      // Image Position
-      'x="' + imagePosition[0] + '" y="' + imagePosition[1] +
-      // Rotation Angle
-      '" transform="rotate(' + heading + ' ' +
-      // Rotation Center
-      imagePosition[0]+ ' ' + imagePosition[1] + ')"' +
-      // Size of Image
-      ' height="20px" width="20px" />'
+    var imageInText = starshipImage.renderImageElementAsString(this.props.ship);
     return {__html: imageInText};
   }
 });
