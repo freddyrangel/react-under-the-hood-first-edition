@@ -1,4 +1,4 @@
-var starshipNavigation = {
+module.exports = {
   data: function(ship) {
     // Heading is the direction in degrees
     var heading = this.heading(ship);
@@ -91,5 +91,3 @@ var starshipNavigation = {
     return degrees * (Math.PI / 180)
   }
 };
-
-module.exports = starshipNavigation;

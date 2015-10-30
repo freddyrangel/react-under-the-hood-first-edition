@@ -1,9 +1,11 @@
 require('./main.css');
+window.Perf = require('react-addons-perf')
+
 var React    = require('react');
 var ReactDOM = require('react-dom');
-var App      = require('./components/App.jsx');
+var Game     = require('./components/Game.jsx');
 
 var appNode = document.createElement('div');
-appNode.className = 'star-trek-app';
+appNode.className = 'react-game';
 document.body.appendChild(appNode);
-ReactDOM.render(<App />, appNode);
+ReactDOM.render(<Game />, appNode);

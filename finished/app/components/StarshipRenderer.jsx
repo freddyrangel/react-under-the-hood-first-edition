@@ -1,7 +1,9 @@
 var React         = require('react');
 var starshipImage = require('../utilities/starshipImage.js');
 
-var Starship = React.createClass({
+module.exports = React.createClass({
+
+  displayName: "StarshipRenderer",
 
   render: function() {
     return (
@@ -15,5 +17,3 @@ var Starship = React.createClass({
     return {__html: imageInText};
   }
 });
-
-module.exports = Starship;

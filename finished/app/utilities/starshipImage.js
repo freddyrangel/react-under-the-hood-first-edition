@@ -1,6 +1,6 @@
 var nav = require('./starshipNavigation.js');
 
-var starshipImage = {
+module.exports = {
   renderImageElementAsString: function(ship) {
     var navData       = nav.data(ship);
     var shipPosition  = ship.position
@@ -18,5 +18,3 @@ var starshipImage = {
     return imageInText;
   }
 };
-
-module.exports = starshipImage;

@@ -1,9 +1,11 @@
 require('jquery-ui/autocomplete');
 var React    = require('react');
 var ReactDOM = require('react-dom');
-var utils    = require('../utilities/starUtilities.js');
 
-var CourseControl = React.createClass({
+module.exports = React.createClass({
+
+  displayName: "CourseControl",
+
   render: function() {
     return (
     <div className="course-control">
@@ -25,14 +27,14 @@ var CourseControl = React.createClass({
   },
 
   autocomplete: function() {
-    var stars = this.props.stars
-    var starNames = utils.getStarNames(stars);
+    var starData = this.props.starData;
+    var starNames = starData.map(function(star) { return star.name });
     $(ReactDOM.findDOMNode(this.refs.search)).autocomplete({
       source: starNames,
       minLength: 3,
       select: function(event, ui) {
         var starName  = ui.item.value;
-        var system    = utils.findSystem(stars, starName);
+        var system    = this.findSystem(starData, starName);
         this.props.updateDestination(system);
       }.bind(this),
       messages: {
@@ -40,7 +42,9 @@ var CourseControl = React.createClass({
         results: function() {}
       }
     });
+  },
+
+  findSystem: function(starData, starName) {
+    return starData.filter(function(star) { return star.name === starName })[0];
   }
 });
-
-module.exports = CourseControl;
