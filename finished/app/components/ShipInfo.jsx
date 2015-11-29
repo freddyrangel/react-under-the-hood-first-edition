@@ -1,13 +1,12 @@
 var React            = require('react');
 var EditableElement  = require('./EditableElement.jsx');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 module.exports = React.createClass({
 
-  displayName: "ShipInfo",
+  mixins: [PureRenderMixin],
 
-  shouldComponentUpdate: function(nextProps, nextState) {
-    return this.props.info !== nextProps.info;
-  },
+  displayName: "ShipInfo",
 
   render: function() {
     return (
@@ -30,7 +29,7 @@ module.exports = React.createClass({
   },
 
   updateInfo: function(key, newValue) {
-    var info = this.props.info;
+    var info = Object.assign({}, this.props.info);
     info[key] = newValue;
     this.props.updateShipInfo(info);
   },

@@ -4,6 +4,10 @@ module.exports = React.createClass({
 
   displayName: "Stars",
 
+  shouldComponentUpdate: function() {
+    return false;
+  },
+
   render: function() {
     return (
       <g>
