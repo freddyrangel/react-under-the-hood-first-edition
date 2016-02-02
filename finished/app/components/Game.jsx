@@ -1,6 +1,6 @@
 var React            = require('react');
 var nav              = require('../utilities/starshipNavigation.js');
-var starData         = require('../data/starData.js');
+var starData         = require('../data/StarData.js');
 var Ship             = require('../data/Ship.js');
 var StarChart        = require('./StarChart.jsx');
 var HelmControl      = require('./HelmControl.jsx');
