@@ -1,4 +1,4 @@
-# React Under the Hood: Star Trek Video Game Demo
+# React Under the Hood: Star Trek Video Game Demo, First Edition
 
 This is the demo for the book [React Under The Hood: A Beginner's Guide](https://leanpub.com/reactunderthehood)
 
