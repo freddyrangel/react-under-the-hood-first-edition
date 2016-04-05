@@ -1,14 +1,16 @@
 # React Under the Hood: Star Trek Video Game Demo
 
-This is the demo for the book [React Under The Hood: A Beginner's Guide](http://bit.ly/react-under-the-hood)
+This is the demo for the book [React Under The Hood: A Beginner's Guide](https://leanpub.com/reactunderthehood)
 
 ## About The Book
 
-React is quickly becoming the preferred JavaScript library for building front end web applications but how does it work exactly? How are events registered and triggered? What is the virtual DOM?
+React is quickly becoming the preferred JavaScript library for building front end web applications but how does it work exactly? How are events registered and triggered? What is the Virtual DOM?
 
-This book goes over the fundamentals of React as well some of the internals of React. You will learn to understand and debug applications built with React. You will learn React patterns and anti-patterns, it's architectural philosophy, and how to work with third-party libraries.
+This book goes over React fundamentals as well as its internals. By the time you finish reading the book, you should have a solid understading of React, how it works under the hood, and how to debug React applications. We will go over React patterns and anti-patterns, its overall architectural philosophy, and how to work with third-party libraries.
 
-Rather than using a typical Todo app as a demo, this book walks you through how to build a Star Trek video game from scratch using React.
+Best of all, we're not going to do yet another Todo app. Rather, this book walks you through how to build a simple Star Trek video game from scratch using React!
+
+**NOTE:** This is the first edition of "React Under the Hood". The repository for the second edition, with updated ES6 syntax, can be found here: [React Under the Hood: Second Edition](https://github.com/freddyrangel/react-under-the-hood-second-edition)
 
 ## Requirements:
 
